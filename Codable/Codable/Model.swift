@@ -62,9 +62,6 @@ struct GroceryStoreService: Decodable {
 }
 
 // 数据处理中需要的 Model
-
-
-
 struct GroceryStore {
     var name: String
     var products: [Product]
