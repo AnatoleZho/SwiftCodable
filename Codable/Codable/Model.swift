@@ -21,6 +21,7 @@ struct Swifter: Decodable {
 }
 
 // 2.属性值为枚举类型解码
+
 struct Beer: Decodable {
     var name: String
     var brewery: String
@@ -37,6 +38,7 @@ struct Beer: Decodable {
 }
 
 // 3. 从数组中解析
+
 struct GroceryProduct: Decodable {
     var name: String
     var points: Int
@@ -45,6 +47,7 @@ struct GroceryProduct: Decodable {
 
 // 5. 解析复杂嵌套结构
 // 根据 JSON 字符串结构创建的结构体
+
 struct GroceryStoreService: Decodable {
     let name: String
     let aisles: [Aisle]
@@ -62,6 +65,7 @@ struct GroceryStoreService: Decodable {
 }
 
 // 数据处理中需要的 Model
+
 struct GroceryStore {
     var name: String
     var products: [Product]
@@ -74,6 +78,7 @@ struct GroceryStore {
 }
 
 // 增加扩展处理已解析的原始数据
+
 extension GroceryStore {
     init(from service: GroceryStoreService) {
         name = service.name
@@ -231,7 +236,10 @@ extension GroceryStoreMerge: Encodable {
 
 // 11. 特殊数据类型处理
 /*
- 11.1 enum， 11.2 Bool 11.3 日期， 11.4 小数
+ 11.1 enum，
+ 11.2 Bool
+ 11.3 日期，
+ 11.4 小数
  */
 
 // **************** 此时必须定义原始值类型 String
